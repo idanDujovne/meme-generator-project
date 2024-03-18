@@ -1,0 +1,8 @@
+/* basics */
+@import url(basics/layout.css);
+@import url(basics/helpers.css);
+@import url(basics/layout.css);
+
+/* components */
+@import url(components/main-gallery.css);
+@import url(components/main-editor.css);

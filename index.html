@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/35b97a4f1d.js" crossorigin="anonymous"></script>
+    <title>Meme Generator</title>
+</head>
+
+<body onload="onInit()" class="main-layout">
+    <header class="main-header full">
+        <nav class="main-nav">
+            <h1>Meme-Generator</h1>
+        </nav>
+
+    </header>
+    <main class="main-content">
+        <section class="main-gallery"></section>
+
+        <section class="main-editor" style="display: none;">
+
+            <div class="canvas-container">
+                <canvas class="editor-canvas" onclick="onAddText(event)" height="400" width="400"></canvas>
+            </div>
+
+            <div class="editor-menu flex">
+                <input class="line-txt" type="text" oninput="onChangeTxt(this.value)" placeholder="Add Text Here">
+
+                <div class="editor-lines">
+                    <button onclick="onSwitchLine()"><i class="fa-solid fa-arrows-rotate"></i></button>
+                    <button onclick="onAddLine()"><i class="fa-solid fa-plus"></i></button>
+                </div>
+
+                <div class="editor-txt">
+                    <button onclick="onChangeFontSize(2)">A+</button>
+                    <button onclick="onChangeFontSize(-2)">A-</button>
+                </div>
+
+                <div class="editor-actions">
+                    <a class="download-btn" href="#" onclick="onDownload(this)" download="myMeme.png"><i class="fa-solid fa-floppy-disk"></i> Download</a>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="main-footer full">
+
+        <small class="footer-rights">© 2024 - All Rights Reserved To Idan Dujovne</small>
+        <ul class="footer-socials">
+            <div class="footer-facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+            </div>
+            <div class="footer-twitter">
+                <i class="fa-brands fa-twitter"></i>
+            </div>
+            <div class="footer-behance">
+                <i class="fa-brands fa-behance"></i>
+            </div>
+            <div class="footer-dribble">
+                <i class="fa-brands fa-dribbble"></i>
+            </div>
+        </ul>
+
+    </footer>
+
+    <script src="js/service/meme.service.js"></script>
+    <script src="js/gallery.controller.js"></script>
+    <script src="js/meme.controller.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

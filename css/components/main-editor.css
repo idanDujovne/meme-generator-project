@@ -1,0 +1,119 @@
+.main-editor {
+    /* display: grid; */
+    grid-template-columns: 1fr 80px 1fr;
+}
+
+.main-editor .canvas-container {
+    grid-column: 1;
+}
+
+.main-editor .editor-menu {
+    grid-column: 3;
+}
+
+.editor-menu {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: rgb(64 66 72);
+
+    border-radius: 20px;
+    
+    padding: 35px 20px;
+}
+
+.editor-menu input {
+    height: 40px;
+    width: 70%;
+
+    border: solid white;
+    border-radius: 40px;
+}
+
+.editor-menu input:focus {
+    outline: none;
+    border: solid rgb(0,170,162);
+}
+
+.editor-menu .editor-lines > *{
+    height: 50px;
+    width: 50px;
+
+    border: none;
+    border-radius: 10px;
+
+    color: white;
+}
+
+.editor-menu .editor-lines > *:hover {
+    opacity: .7;
+}
+
+.editor-menu .editor-lines button:first-child {
+    background-color: rgb(20, 180, 210);
+
+    box-shadow: 
+        inset 0px 4px 0px 0px rgb(148, 216, 231),
+        inset 0px -4px 0px 0px rgb(0, 142 , 154);
+}
+
+.editor-menu .editor-lines button:nth-child(2) {
+    background-color: rgb(0, 220, 90);
+
+    box-shadow: 
+        inset 0px 4px 0px 0px rgb(148, 233, 182),
+        inset 0px -4px 0px 0px rgb(0, 98 , 53);
+}
+
+.editor-menu .editor-txt {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+
+    height: 80px;
+    width: 250px;
+
+    background-color: rgb(0, 170, 162);
+    border-radius: 15px;
+    
+    padding: 15px;
+}
+
+.editor-menu .editor-txt > * {
+    height: 40px;
+    width: 40px;
+    
+    background-color: white;
+    
+    border: none;
+    border-radius: 10px;
+}
+.editor-menu .editor-txt > *:hover {
+    opacity: .8;
+}
+
+.editor-menu .editor-actions {
+    border-radius: 10px;
+    box-shadow: 
+        inset 0px 4px 0px 0px rgb(213 112 232),
+        inset 0px -4px 0px 0px rgb(124, 0 , 157);
+
+    padding: 10px;
+
+    background-color: rgb(176, 0, 225);
+    color: white;
+    
+}
+
+.editor-menu .editor-actions > * {
+    text-decoration: none;
+    color: inherit;
+    
+}
+
+.editor-menu .editor-actions > *:visited {
+    text-decoration: none;
+    color: inherit;
+}
