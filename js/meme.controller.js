@@ -2,6 +2,7 @@
 
 let gElCanvas
 let gCtx
+console.log('test')
 
 
 function onInitCanvas() {
