@@ -2,8 +2,6 @@
 
 let gElCanvas
 let gCtx
-console.log('test')
-
 
 function onInitCanvas() {
     gElCanvas = document.querySelector('.editor-canvas')
@@ -29,10 +27,6 @@ function renderMeme() {
 
         drawText(meme)
     }
-}
-
-function onAddText(ev) {
-    console.log('Canvas clicked')
 }
 
 function onAddLine() {
@@ -61,6 +55,31 @@ function onChangeFontSize(diff) {
     lines[selectedLineIdx].size += diff
 
     renderMeme()
+}
+
+function onCanvasClick(ev) {
+    const { offsetX, offsetY } = ev
+    const { lines } = getMeme()
+
+    lines.forEach((line, idx) => {
+        const textX = line.pos.x
+        const textY = line.pos.y
+        const textWidth = gCtx.measureText(line.txt).width
+        const textHeight = line.size
+
+        const minX = textX
+        const minY = textY - textHeight
+        const maxX = textX + textWidth
+        const maxY = textY
+
+        if (offsetX >= minX && offsetX <= maxX &&
+            offsetY >= minY && offsetY <= maxY) {
+
+            updateSelectedLine(idx)
+            renderTxt()
+            renderMeme()
+        }
+    })
 }
 
 function drawText(meme) {
