@@ -9,7 +9,7 @@ function renderGallery() {
     let strHtml =  images.map(img => `
         <img src="${img.url}" onclick="onImgSelect(${img.id})">
     `)
-    document.querySelector('.main-gallery').innerHTML = strHtml.join('')
+    document.querySelector('.gallery-imgs').innerHTML = strHtml.join('')
 }
 
 function onImgSelect(imgId) {

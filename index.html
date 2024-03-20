@@ -22,7 +22,22 @@
 
     </header>
     <main class="main-content">
-        <section class="main-gallery"></section>
+        <section class="main-gallery">
+
+            <div class="main-filter">
+                <div class="search-bar flex">
+                    <input type="text" placeholder="Search">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div class="keywords-filter flex">
+                    <button value="dog" onclick="onKeywordClick(this.value)">Dog</button>
+                    <button value="funny" onclick="onKeywordClick(this.value)">Funny</button>
+                </div>
+            </div>
+
+            <div class="gallery-imgs"></div>
+
+        </section>
 
         <section class="main-editor" style="display: none;">
 
@@ -40,17 +55,22 @@
                 </div>
 
                 <div class="editor-txt">
+
                     <button onclick="onChangeFontSize(2)">A+</button>
                     <button onclick="onChangeFontSize(-2)">A-</button>
                     <button onclick="onAlignTxt('left')"><i class="fa-solid fa-align-left"></i></button>
                     <button onclick="onAlignTxt('center')"><i class="fa-solid fa-align-center"></i></button>
                     <button onclick="onAlignTxt('right')"><i class="fa-solid fa-align-right"></i></button>
-                    <select onchange="onChangeFont(this.value)">
 
+                    <select onchange="onChangeFont(this.value)">
                         <option value="Arial, Helvetica, sans-serif">Ariel</option>
                         <option value="sans-serif">Sans-serif</option>
                         <option value="serif">Serif</option>
                     </select>
+
+                    <button onclick="onChangeOutline()"><i class="fa-solid fa-brush"></i></button>
+                    <button onclick="onChangeFill()"><i class="fa-solid fa-fill-drip"></i></button>
+
                 </div>
 
                 <div class="editor-actions">
