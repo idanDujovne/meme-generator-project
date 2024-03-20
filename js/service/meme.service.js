@@ -45,6 +45,7 @@ function getImage() {
 
 function removeLine() {
     gMeme.lines.splice(gMeme.selectedLineIdx, 1)
+    updateSelectedLine(--gMeme.selectedLineIdx)
 }
 
 function changeFont(font) {

@@ -36,6 +36,30 @@ function resizeCanvas() {
     gElCanvas.height = canvasHeight
 }
 
+function onAlignTxt(align) {
+    const { lines, selectedLineIdx } = getMeme()
+    const text = lines[selectedLineIdx].txt
+
+    gCtx.font = `${lines[selectedLineIdx].size}px ${lines[selectedLineIdx].font}`
+    const textWidth = gCtx.measureText(text).width
+
+    switch (align) {
+        case 'right':
+            lines[selectedLineIdx].pos.x = gElCanvas.width - textWidth - 10
+            break
+        case 'center':
+            lines[selectedLineIdx].pos.x = (gElCanvas.width - textWidth) / 2
+            break
+        case 'left':
+            lines[selectedLineIdx].pos.x = 10
+            break
+        default:
+            break
+    }
+    renderMeme()
+}
+
+
 function onRemoveLine() {
     removeLine()
     renderMeme()
@@ -64,8 +88,9 @@ function onChangeFont(font) {
 }
 
 function onChangeTxt(txt) {
+    const meme = getMeme()
     setLineTxt(txt)
-    drawText(getMeme())
+    drawText(meme)
     renderMeme()
 }
 
@@ -107,7 +132,6 @@ function drawText(meme) {
         const originalStrokeStyle = gCtx.strokeStyle
 
         gCtx.font = `${line.size}px ${line.font}`
-        // gCtx.font = `${line.size}px ${line.font}`
         gCtx.fillStyle = line.color
         gCtx.strokeStyle = line.color
 
