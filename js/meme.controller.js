@@ -36,6 +36,12 @@ function resizeCanvas() {
     gElCanvas.height = canvasHeight
 }
 
+function onRemoveLine() {
+    removeLine()
+    renderMeme()
+    renderTxt()
+}
+
 function onAddLine() {
     const { lines } = getMeme()
     addLine()

@@ -41,6 +41,10 @@ function getImage() {
     return selectedImg
 }
 
+function removeLine() {
+    gMeme.lines.splice(gMeme.selectedLineIdx, 1)
+}
+
 function setLineTxt(txt) {
     gMeme.lines[gMeme.selectedLineIdx].txt = txt
 }

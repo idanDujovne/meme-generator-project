@@ -27,7 +27,7 @@
         <section class="main-editor" style="display: none;">
 
             <div class="canvas-container">
-                <canvas class="editor-canvas" onclick="onCanvasClick(event)" height="400" width="400"></canvas>
+                <canvas class="editor-canvas" onclick="onCanvasClick(event)" height="400" width="500"></canvas>
             </div>
 
             <div class="editor-menu flex">
@@ -36,6 +36,7 @@
                 <div class="editor-lines">
                     <button onclick="onSwitchLine()"><i class="fa-solid fa-arrows-rotate"></i></button>
                     <button onclick="onAddLine()"><i class="fa-solid fa-plus"></i></button>
+                    <button onclick="onRemoveLine()"><i class="fa-solid fa-trash"></i></button>
                 </div>
 
                 <div class="editor-txt">
