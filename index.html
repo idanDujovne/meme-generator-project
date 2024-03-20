@@ -42,6 +42,11 @@
                 <div class="editor-txt">
                     <button onclick="onChangeFontSize(2)">A+</button>
                     <button onclick="onChangeFontSize(-2)">A-</button>
+                    <select onchange="onChangeFont(this.value)">
+                        <option value="Arial, Helvetica, sans-serif">Ariel</option>
+                        <option value="sans-serif">Sans-serif</option>
+                        <option value="serif">Serif</option>
+                    </select>
                 </div>
 
                 <div class="editor-actions">

@@ -16,12 +16,14 @@ let gMeme = {
             txt: 'I sometimes eat Falafel',
             size: 20,
             color: 'red',
+            font: 'Arial, Helvetica, sans-serif'
         },
         {
             pos: { x: 100, y: 100 },
             txt: 'This is the second line',
             size: 30,
             color: 'blue',
+            font: 'Arial, Helvetica, sans-serif'
         }]
 }
 
@@ -43,6 +45,10 @@ function getImage() {
 
 function removeLine() {
     gMeme.lines.splice(gMeme.selectedLineIdx, 1)
+}
+
+function changeFont(font) {
+    gMeme.lines[gMeme.selectedLineIdx].font = font
 }
 
 function setLineTxt(txt) {

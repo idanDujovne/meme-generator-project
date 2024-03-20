@@ -57,6 +57,12 @@ function onSwitchLine() {
     renderMeme()
 }
 
+function onChangeFont(font) {
+    changeFont(font)
+    renderMeme()
+    renderTxt()
+}
+
 function onChangeTxt(txt) {
     setLineTxt(txt)
     drawText(getMeme())
@@ -100,7 +106,8 @@ function drawText(meme) {
         const originalFillStyle = gCtx.fillStyle
         const originalStrokeStyle = gCtx.strokeStyle
 
-        gCtx.font = `${line.size}px serif`
+        gCtx.font = `${line.size}px ${line.font}`
+        // gCtx.font = `${line.size}px ${line.font}`
         gCtx.fillStyle = line.color
         gCtx.strokeStyle = line.color
 
