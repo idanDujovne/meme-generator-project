@@ -8,9 +8,10 @@ function onInitCanvas() {
     gCtx = gElCanvas.getContext('2d')
 }
 
-function renderSelectedImg() {
+function renderSelectedImg(img) {
     document.querySelector('.main-gallery').style.display = 'none'
     document.querySelector('.main-editor').style.display = 'grid'
+    resizeCanvas(img)
     renderMeme()
     renderTxt()
 }
@@ -27,6 +28,12 @@ function renderMeme() {
 
         drawText(meme)
     }
+}
+
+function resizeCanvas() {
+    let img = new Image
+    const canvasHeight = (img.height + gElCanvas.width) / img.width
+    gElCanvas.height = canvasHeight
 }
 
 function onAddLine() {

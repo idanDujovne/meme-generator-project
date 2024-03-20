@@ -15,5 +15,5 @@ function renderGallery() {
 function onImgSelect(imgId) {
     let img = getImages().find(img => img.id === imgId)
     setImg(img)
-    renderSelectedImg()
+    renderSelectedImg(img)
 }

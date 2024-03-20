@@ -5,6 +5,7 @@
 
 .main-editor .canvas-container {
     grid-column: 1;
+    place-self: center;
 }
 
 .main-editor .editor-menu {
