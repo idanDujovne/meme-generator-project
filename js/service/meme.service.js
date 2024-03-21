@@ -27,16 +27,9 @@ let gMeme = {
     lines: [
         {
             pos: { x: 50, y: 50 },
-            txt: 'I sometimes eat Falafel',
+            txt: 'Input Text Here',
             size: 20,
             color: 'red',
-            font: 'Arial, Helvetica, sans-serif'
-        },
-        {
-            pos: { x: 100, y: 100 },
-            txt: 'This is the second line',
-            size: 30,
-            color: 'blue',
             font: 'Arial, Helvetica, sans-serif'
         }]
 }
