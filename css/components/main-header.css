@@ -1,27 +1,17 @@
 .main-header {
-    justify-content: space-between;
-    margin-inline: 50px;
-    margin-block-end: 50px;
-
     border-radius: 45px;
     
     background-color: #5970c1;
     background-image: linear-gradient(-86deg,#33be6d 0,#0c98b9 100%);
-
-    padding-inline: 40px;
 
     font-family: sans-serif;
 }
 
 .main-header .main-nav {
     align-self: center;
-
-    margin-inline-end: 375px;
 }
 
 .main-header .main-nav .nav-list > * > *{
-    margin-inline: 20px;
-
     color: white;
     text-decoration: none;
 

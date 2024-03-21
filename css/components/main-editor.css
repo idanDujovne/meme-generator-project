@@ -1,17 +1,18 @@
 .main-editor {
-    grid-template-columns: 1fr 80px 1fr;
+    grid-template-columns: 1fr;
 }
 
 .main-editor .canvas-container {
-    grid-column: 1;
     place-self: center;
+    margin-bottom: 30px;
 }
 
 .main-editor .editor-menu {
-    grid-column: 3;
-}
+    place-self: center;
+    width: 600px;
 
-.editor-menu {
+    gap: 15px;
+
     flex-direction: column;
     justify-content: space-between;
     align-items: center;

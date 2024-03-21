@@ -8,7 +8,7 @@
 
 .main-gallery .main-filter {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
 
     height: 100px;
 }
@@ -41,7 +41,7 @@
     border: none;
     border-top-right-radius: 40px;
     border-bottom-right-radius: 40px;
-    
+
     background-color: rgb(34, 37, 44);
 }
 
@@ -59,7 +59,7 @@
 .main-gallery .main-filter .keywords-filter {
     justify-content: center;
     align-items: center;
-    height: 60px;
+    height: 25px;
     width: 100%;
 
     background-color: rgb(135, 137, 141);
@@ -69,11 +69,11 @@
 
 .main-gallery .main-filter .keywords-filter>* {
     height: max-content;
-    
+
     border: none;
-    
+
     background-color: rgb(135, 137, 141);
-    
+
     color: white;
 }
 
@@ -90,9 +90,10 @@
     margin: 0;
 }
 
-.main-gallery .gallery-imgs > * {
+.main-gallery .gallery-imgs>* {
     place-self: center;
 }
-.main-gallery .gallery-imgs > *:hover {
+
+.main-gallery .gallery-imgs>*:hover {
     cursor: pointer;
 }

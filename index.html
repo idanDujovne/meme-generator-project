@@ -10,15 +10,19 @@
 </head>
 
 <body onload="onInit()" class="main-layout">
+
+    <div class="main-screen" onclick="toggleMenu()"></div>
+
     <header class="main-header full flex">
         <h1>Meme Generator</h1>
         <nav class="main-nav">
             <ul class="nav-list clean-list flex">
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">Saved</a></li>
-                <li><a href="#">Random</a></li>
+                <div><a href="#">Gallery</a></div>
+                <div><a href="#">Saved</a></div>
+                <div><a href="#">Random</a></div>
             </ul>
         </nav>
+        <button class="menu-btn" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
 
     </header>
     <main class="main-content">

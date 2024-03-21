@@ -8,3 +8,6 @@
 @import url(components/main-gallery.css);
 @import url(components/main-editor.css);
 @import url(components/main-footer.css);
+
+/* media-queries */
+@import url(setup/mq.css);
