@@ -12,8 +12,7 @@ function renderSelectedImg(img) {
     document.querySelector('.main-gallery').style.display = 'none'
     document.querySelector('.main-editor').style.display = 'grid'
     resizeCanvas(img)
-    renderMeme()
-    renderTxt()
+    renderMemeAndText()
 }
 
 function renderMeme() {
@@ -68,29 +67,25 @@ function onAlignTxt(align) {
 
 function onRemoveLine() {
     removeLine()
-    renderMeme()
-    renderTxt()
+    renderMemeAndText()
 }
 
 function onAddLine() {
     const { lines } = getMeme()
     addLine()
     updateSelectedLine(lines.length - 1)
-    renderTxt()
-    renderMeme()
+    renderMemeAndText()
 }
 
 function onSwitchLine() {
     let { selectedLineIdx } = getMeme()
     updateSelectedLine(++selectedLineIdx)
-    renderTxt()
-    renderMeme()
+    renderMemeAndText()
 }
 
 function onChangeFont(font) {
     changeFont(font)
-    renderMeme()
-    renderTxt()
+    renderMemeAndText()
 }
 
 function onChangeTxt(txt) {
@@ -112,22 +107,19 @@ function onCanvasClick(ev) {
     const { lines } = getMeme()
 
     lines.forEach((line, idx) => {
-        const textX = line.pos.x
-        const textY = line.pos.y
         const textWidth = gCtx.measureText(line.txt).width
         const textHeight = line.size
 
-        const minX = textX
-        const minY = textY - textHeight
-        const maxX = textX + textWidth
-        const maxY = textY
+        const minX = line.pos.x
+        const minY = line.pos.y - textHeight
+        const maxX = line.pos.x + textWidth
+        const maxY = line.pos.y
 
         if (offsetX >= minX && offsetX <= maxX &&
             offsetY >= minY && offsetY <= maxY) {
 
             updateSelectedLine(idx)
-            renderTxt()
-            renderMeme()
+            renderMemeAndText()
         }
     })
 }
@@ -176,4 +168,9 @@ function renderTxt() {
 function onDownload(elLink) {
     const dataUrl = gElCanvas.toDataURL('image/png')
     elLink.href = dataUrl
+}
+
+function renderMemeAndText() {
+    renderMeme()
+    renderTxt()
 }

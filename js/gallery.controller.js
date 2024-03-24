@@ -5,6 +5,8 @@ function onInitGallery() {
 }
 
 function renderGallery() {
+    document.querySelector('.main-gallery').style.display = 'block'
+    document.querySelector('.main-editor').style.display = 'none'
     const images = getImages()
     let strHtml =  images.map(img => `
         <img src="${img.url}" onclick="onImgSelect(${img.id})">

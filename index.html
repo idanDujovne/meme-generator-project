@@ -17,9 +17,9 @@
         <h1>Meme Generator</h1>
         <nav class="main-nav">
             <ul class="nav-list clean-list flex">
-                <div><a href="#">Gallery</a></div>
-                <div><a href="#">Saved</a></div>
-                <div><a href="#">Random</a></div>
+                <div onclick="renderGallery()">Gallery</div>
+                <div>Saved</div>
+                <div>Random</div>
             </ul>
         </nav>
         <button class="menu-btn" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
@@ -66,15 +66,14 @@
                     <button onclick="onAlignTxt('left')"><i class="fa-solid fa-align-left"></i></button>
                     <button onclick="onAlignTxt('center')"><i class="fa-solid fa-align-center"></i></button>
                     <button onclick="onAlignTxt('right')"><i class="fa-solid fa-align-right"></i></button>
+                    <button onclick="onAlignTxt('up')"><i class="fa-solid fa-up-long"></i></button>
+                    <button onclick="onAlignTxt ('down')"><i class="fa-solid fa-down-long"></i></button>
 
                     <select onchange="onChangeFont(this.value)">
                         <option value="Arial, Helvetica, sans-serif">Ariel</option>
                         <option value="sans-serif">Sans-serif</option>
                         <option value="serif">Serif</option>
                     </select>
-
-                    <button onclick="onAlignTxt('up')"><i class="fa-solid fa-up-long"></i></button>
-                    <button onclick="onAlignTxt('down')"><i class="fa-solid fa-down-long"></i></button>
 
                 </div>
 
