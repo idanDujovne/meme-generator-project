@@ -53,6 +53,12 @@ function onAlignTxt(align) {
         case 'left':
             lines[selectedLineIdx].pos.x = 10
             break
+        case 'up':
+            lines[selectedLineIdx].pos.y = 40
+            break
+        case 'down':
+            lines[selectedLineIdx].pos.y = gElCanvas.height - 40
+            break
         default:
             break
     }

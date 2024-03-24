@@ -26,10 +26,10 @@ let gMeme = {
     selectedLineIdx: 0,
     lines: [
         {
-            pos: { x: 50, y: 50 },
+            pos: { x: 100, y: 50 },
             txt: 'Input Text Here',
             size: 20,
-            color: 'red',
+            color: 'black',
             font: 'Arial, Helvetica, sans-serif'
         }]
 }
@@ -69,7 +69,7 @@ function updateSelectedLine(selectedLineIdx) {
 
 function addLine() {
     const newLine = {
-        pos: { x: 100, y: 30 },
+        pos: { x: 100, y: 300 },
         txt: 'Add Text Here',
         size: 20,
         color: 'black',
